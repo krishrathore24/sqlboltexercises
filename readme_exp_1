@@ -1,22 +1,17 @@
 # sqlboltexercise
 ---> Exercise 1:SELECT queries 101
 
-*To retrieve data from a SQL database, we need to write SELECT statements*,
-which are often colloquially referred to as queries.
-A query in itself is just a statement which declares what data we are looking for, where to find it in the database, and optionally, 
-how to transform it before it is returned. It has a specific syntax though,
-which is what we are going to learn in the following exercises.
+**To retrieve data from a SQL database, we need to write SELECT statements**, which are often colloquially referred to as queries. A query in itself is just a statement which declares what data we are looking for, where to find it in the database, and optionally, how to transform it before it is returned. It has a specific syntax though, which is what we are going to learn in the following exercises.
 
-As we mentioned in the introduction, *you can think of a table in SQL as a type of an entity* (ie. Dogs), and each row in that table as a specific instance of that type (ie. A pug, a beagle, a different colored pug, etc). This means that the columns would then represent the common properties shared by all instances of that entity (ie. Color of fur, length of tail, etc).
+As we mentioned in the introduction, **you can think of a table in SQL as a type of an entity** (ie. Dogs), and each row in that table as a specific instance of that type (ie. A pug, a beagle, a different colored pug, etc). This means that the columns would then represent the common properties shared by all instances of that entity (ie. Color of fur, length of tail, etc).
 
 
 
-Question:1 Find the title of each film 
+**Find the title of each film.**
 
 ```sql
 SELECT title from movies;
 ```
-
    
   - Monsters, Inc.
 - Finding Nemo
@@ -33,9 +28,9 @@ SELECT title from movies;
 
 Question:2 Find the director of each film
 
-sql
+```sql
 SELECT director from movies;
-
+```
    
 - Pete Docter
 - Andrew Stanton
@@ -49,11 +44,11 @@ SELECT director from movies;
 - Brenda Chapman
 - Dan Scanlon
 
-Question:3 Find the title and director of each film 
+Question:3 Find the title and director of each film
 
-sql 
+```sql
 SELECT title , director from movies;
-
+```
    
 | Title | Director |
 |------|----------|
@@ -72,9 +67,9 @@ SELECT title , director from movies;
 
 Question:4 Find the title and year of each film
 
-sql 
+```sql
 SELECT title , year from movies;
-
+```
    
 | Title | Year |
 |------|------|
@@ -92,9 +87,9 @@ SELECT title , year from movies;
 
 Question:5 Find all the information about each film
 
-sql
+```sql
 SELECT * from movies;
-
+```
    
 | ID | Title | Director | Year | Length (Minutes) |
 |----|------|----------|------|------------------|
@@ -109,3 +104,6 @@ SELECT * from movies;
 | 9 | WALL-E | Andrew Stanton | 2008 | 104 |
 | 10 | Up | Pete Docter | 2009 | 101 |
 | 11 | Toy Story 3 | Lee Unkrich | 2010 | 103 |
+| 12 | Cars 2 | John Lasseter | 2011 | 120 |
+| 13 | Brave | Brenda Chapman | 2012 | 102 |
+| 14 | Monsters University | Dan Scanlon | 2013 | 110 |
