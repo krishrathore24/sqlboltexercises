@@ -1,10 +1,636 @@
+
+
+# sqlboltexercise
+---> Exercise 1:SELECT queries 101
+
+**To retrieve data from a SQL database, we need to write SELECT statements**, which are often colloquially referred to as queries. A query in itself is just a statement which declares what data we are looking for, where to find it in the database, and optionally, how to transform it before it is returned. It has a specific syntax though, which is what we are going to learn in the following exercises.
+As we mentioned in the introduction, **you can think of a table in SQL as a type of an entity** (ie. Dogs), and each row in that table as a specific instance of that type (ie. A pug, a beagle, a different colored pug, etc). This means that the columns would then represent the common properties shared by all instances of that entity (ie. Color of fur, length of tail, etc).
+
+
+
+Question:1 Find the title of each film 
+
+sql
+SELECT title from movies;
+
+   
+  - Monsters, Inc.
+- Finding Nemo
+- The Incredibles
+- Cars
+- Ratatouille
+- WALL-E
+- Up
+- Toy Story 3
+- Cars 2
+- Brave
+- Monsters University
+
+
+Question:2 Find the director of each film
+
+sql
+SELECT director from movies;
+
+   
+- Pete Docter
+- Andrew Stanton
+- Brad Bird
+- John Lasseter
+- Brad Bird
+- Andrew Stanton
+- Pete Docter
+- Lee Unkrich
+- John Lasseter
+- Brenda Chapman
+- Dan Scanlon
+
+Question:3 Find the title and director of each film 
+
+sql 
+SELECT title , director from movies;
+
+   
+| Title | Director |
+|------|----------|
+| Monsters, Inc. | Pete Docter |
+| Finding Nemo | Andrew Stanton |
+| The Incredibles | Brad Bird |
+| Cars | John Lasseter |
+| Ratatouille | Brad Bird |
+| WALL-E | Andrew Stanton |
+| Up | Pete Docter |
+| Toy Story 3 | Lee Unkrich |
+| Cars 2 | John Lasseter |
+| Brave | Brenda Chapman |
+| Monsters University | Dan Scanlon |
+
+
+Question:4 Find the title and year of each film
+
+sql 
+SELECT title , year from movies;
+
+   
+| Title | Year |
+|------|------|
+| Monsters, Inc. | 2001 |
+| Finding Nemo | 2003 |
+| The Incredibles | 2004 |
+| Cars | 2006 |
+| Ratatouille | 2007 |
+| WALL-E | 2008 |
+| Up | 2009 |
+| Toy Story 3 | 2010 |
+| Cars 2 | 2011 |
+| Brave | 2012 |
+| Monsters University | 2013 |
+
+Question:5 Find all the information about each film
+
+sql
+SELECT * from movies;
+
+   
+| ID | Title | Director | Year | Length (Minutes) |
+|----|------|----------|------|------------------|
+| 1 | Toy Story | John Lasseter | 1995 | 81 |
+| 2 | A Bug's Life | John Lasseter | 1998 | 95 |
+| 3 | Toy Story 2 | John Lasseter | 1999 | 93 |
+| 4 | Monsters, Inc. | Pete Docter | 2001 | 92 |
+| 5 | Finding Nemo | Andrew Stanton | 2003 | 107 |
+| 6 | The Incredibles | Brad Bird | 2004 | 116 |
+| 7 | Cars | John Lasseter | 2006 | 117 |
+| 8 | Ratatouille | Brad Bird | 2007 | 115 |
+| 9 | WALL-E | Andrew Stanton | 2008 | 104 |
+| 10 | Up | Pete Docter | 2009 | 101 |
+| 11 | Toy Story 3 | Lee Unkrich | 2010 | 103
+
+Your answers are mostly correct 👍 — just a small improvement needed in Question 1.
+
+✅ Correct & Final Answers
+Q1: Find the title of each film
+SELECT title FROM movies;
+✔ Output should include all titles, including:
+
+Toy Story
+
+A Bug's Life
+
+Toy Story 2
+
+Monsters, Inc.
+
+Finding Nemo
+
+The Incredibles
+
+Cars
+
+Ratatouille
+
+WALL-E
+
+Up
+
+Toy Story 3
+
+👉 Your list missed the first 3 movies, so just include them.
+
+Q2: Find the director of each film
+SELECT director FROM movies;
+✔ Correct
+
+Q3: Find the title and director of each film
+SELECT title, director FROM movies;
+✔ Correct
+
+Q4: Find the title and year of each film
+SELECT title, year FROM movies;
+✔ Correct
+
+Q5: Find all the information about each film
+SELECT * FROM movies;
+✔ Correct
+
+🔥 Final Feedback
+Your SQL syntax is perfect 💯
+
+Only data completeness issue in Q1
+
+Concept understanding: ✔ Strong
+
+If you want, I can give you Exercise 2 (WHERE clause + filtering) or exam-level questions with solutions 🚀
+
+
+
+# sqlboltexercise
+---> Exercise 1:SELECT queries 101
+
+*To retrieve data from a SQL database, we need to write SELECT statements*, which are often colloquially referred to as queries. A query in itself is just a statement which declares what data we are looking for, where to find it in the database, and optionally, how to transform it before it is returned. It has a specific syntax though, which is what we are going to learn in the following exercises.
+
+As we mentioned in the introduction, *you can think of a table in SQL as a type of an entity* (ie. Dogs), and each row in that table as a specific instance of that type (ie. A pug, a beagle, a different colored pug, etc). This means that the columns would then represent the common properties shared by all instances of that entity (ie. Color of fur, length of tail, etc).
+
+
+
+Question:1 Find the title of each film 
+
+sql
+SELECT title from movies;
+
+   
+  - Monsters, Inc.
+- Finding Nemo
+- The Incredibles
+- Cars
+- Ratatouille
+- WALL-E
+- Up
+- Toy Story 3
+- Cars 2
+- Brave
+- Monsters University
+
+
+Question:2 Find the director of each film
+
+sql
+SELECT director from movies;
+
+   
+- Pete Docter
+- Andrew Stanton
+- Brad Bird
+- John Lasseter
+- Brad Bird
+- Andrew Stanton
+- Pete Docter
+- Lee Unkrich
+- John Lasseter
+- Brenda Chapman
+- Dan Scanlon
+
+Question:3 Find the title and director of each film 
+
+sql 
+SELECT title , director from movies;
+
+   
+| Title | Director |
+|------|----------|
+| Monsters, Inc. | Pete Docter |
+| Finding Nemo | Andrew Stanton |
+| The Incredibles | Brad Bird |
+| Cars | John Lasseter |
+| Ratatouille | Brad Bird |
+| WALL-E | Andrew Stanton |
+| Up | Pete Docter |
+| Toy Story 3 | Lee Unkrich |
+| Cars 2 | John Lasseter |
+| Brave | Brenda Chapman |
+| Monsters University | Dan Scanlon |
+
+
+Question:4 Find the title and year of each film
+
+sql 
+SELECT title , year from movies;
+
+   
+| Title | Year |
+|------|------|
+| Monsters, Inc. | 2001 |
+| Finding Nemo | 2003 |
+| The Incredibles | 2004 |
+| Cars | 2006 |
+| Ratatouille | 2007 |
+| WALL-E | 2008 |
+| Up | 2009 |
+| Toy Story 3 | 2010 |
+| Cars 2 | 2011 |
+| Brave | 2012 |
+| Monsters University | 2013 |
+
+Question:5 Find all the information about each film
+
+sql
+SELECT * from movies;
+
+   
+| ID | Title | Director | Year | Length (Minutes) |
+|----|------|----------|------|------------------|
+| 1 | Toy Story | John Lasseter | 1995 | 81 |
+| 2 | A Bug's Life | John Lasseter | 1998 | 95 |
+| 3 | Toy Story 2 | John Lasseter | 1999 | 93 |
+| 4 | Monsters, Inc. | Pete Docter | 2001 | 92 |
+| 5 | Finding Nemo | Andrew Stanton | 2003 | 107 |
+| 6 | The Incredibles | Brad Bird | 2004 | 116 |
+| 7 | Cars | John Lasseter | 2006 | 117 |
+| 8 | Ratatouille | Brad Bird | 2007 | 115 |
+| 9 | WALL-E | Andrew Stanton | 2008 | 104 |
+| 10 | Up | Pete Docter | 2009 | 101 |
+| 11 | Toy Story 3 | Lee Unkrich | 2010 | 103 |
+
+Good work 👍 — your SQL syntax is correct, but your outputs for Q1–Q4 are incomplete.
+
+Let’s fix everything cleanly so your assignment is 100% correct 👇
+
+✅ Correct Answers (Final)
+Q1: Find the title of each film
+SELECT title FROM movies;
+✔ Correct Output:
+
+Toy Story
+
+A Bug's Life
+
+Toy Story 2
+
+Monsters, Inc.
+
+Finding Nemo
+
+The Incredibles
+
+Cars
+
+Ratatouille
+
+WALL-E
+
+Up
+
+Toy Story 3
+
+❌ Your mistake: You missed first 3 movies and added extra ones (Cars 2, Brave, Monsters University not in table).
+
+Q2: Find the director of each film
+SELECT director FROM movies;
+✔ Correct Output:
+
+John Lasseter
+
+John Lasseter
+
+John Lasseter
+
+Pete Docter
+
+Andrew Stanton
+
+Brad Bird
+
+John Lasseter
+
+Brad Bird
+
+Andrew Stanton
+
+Pete Docter
+
+Lee Unkrich
+
+❌ Your mistake: Missing first 3 rows + extra directors added.
+
+Q3: Find the title and director of each film
+SELECT title, director FROM movies;
+✔ Correct Table:
+
+Title	Director
+Toy Story	John Lasseter
+A Bug's Life	John Lasseter
+Toy Story 2	John Lasseter
+Monsters, Inc.	Pete Docter
+Finding Nemo	Andrew Stanton
+The Incredibles	Brad Bird
+Cars	John Lasseter
+Ratatouille	Brad Bird
+WALL-E	Andrew Stanton
+Up	Pete Docter
+Toy Story 3	Lee Unkrich
+Q4: Find the title and year of each film
+SELECT title, year FROM movies;
+✔ Correct Table:
+
+Title	Year
+Toy Story	1995
+A Bug's Life	1998
+Toy Story 2	1999
+Monsters, Inc.	2001
+Finding Nemo	2003
+The Incredibles	2004
+Cars	2006
+Ratatouille	2007
+WALL-E	2008
+Up	2009
+Toy Story 3	2010
+Q5: Find all the information about each film
+SELECT * FROM movies;
+✔ Your answer is correct 💯
+
+🔥 Final Feedback
+✅ SQL queries: Perfect
+
+⚠️ Output issue: You mixed datasets (extra movies added)
+
+📚 Concept: Clear and strong
+
+If you want, I can give:
+👉 Exercise 2 (WHERE clause)
+👉 OR viva/exam questions from this topic
+
+Just tell me 👍
+
+
+
+make it git pastable
+
+Here is your clean, GitHub/Markdown pastable version 👇
+
+sqlbolt Exercise 1: SELECT queries 101
+Introduction
+To retrieve data from a SQL database, we use SELECT statements. A query specifies:
+
+What data to retrieve
+
+From which table
+
+How to present it
+
+A table represents an entity, rows are instances, and columns are attributes.
+
+Question 1: Find the title of each film
+SELECT title FROM movies;
+Output:
+
+Toy Story
+
+A Bug's Life
+
+Toy Story 2
+
+Monsters, Inc.
+
+Finding Nemo
+
+The Incredibles
+
+Cars
+
+Ratatouille
+
+WALL-E
+
+Up
+
+Toy Story 3
+
+Question 2: Find the director of each film
+SELECT director FROM movies;
+Output:
+
+John Lasseter
+
+John Lasseter
+
+John Lasseter
+
+Pete Docter
+
+Andrew Stanton
+
+Brad Bird
+
+John Lasseter
+
+Brad Bird
+
+Andrew Stanton
+
+Pete Docter
+
+Lee Unkrich
+
+Question 3: Find the title and director of each film
+SELECT title, director FROM movies;
+Output:
+
+Title	Director
+Toy Story	John Lasseter
+A Bug's Life	John Lasseter
+Toy Story 2	John Lasseter
+Monsters, Inc.	Pete Docter
+Finding Nemo	Andrew Stanton
+The Incredibles	Brad Bird
+Cars	John Lasseter
+Ratatouille	Brad Bird
+WALL-E	Andrew Stanton
+Up	Pete Docter
+Toy Story 3	Lee Unkrich
+Question 4: Find the title and year of each film
+SELECT title, year FROM movies;
+Output:
+
+Title	Year
+Toy Story	1995
+A Bug's Life	1998
+Toy Story 2	1999
+Monsters, Inc.	2001
+Finding Nemo	2003
+The Incredibles	2004
+Cars	2006
+Ratatouille	2007
+WALL-E	2008
+Up	2009
+Toy Story 3	2010
+Question 5: Find all the information about each film
+SELECT * FROM movies;
+Output:
+
+ID	Title	Director	Year	Length (Minutes)
+1	Toy Story	John Lasseter	1995	81
+2	A Bug's Life	John Lasseter	1998	95
+3	Toy Story 2	John Lasseter	1999	93
+4	Monsters, Inc.	Pete Docter	2001	92
+5	Finding Nemo	Andrew Stanton	2003	107
+6	The Incredibles	Brad Bird	2004	116
+7	Cars	John Lasseter	2006	117
+8	Ratatouille	Brad Bird	2007	115
+9	WALL-E	Andrew Stanton	2008	104
+10	Up	Pete Docter	2009	101
+11	Toy Story 3	Lee Unkrich	2010	103
+If you want, I can also convert this into:
+
+📄 PDF
+
+📊 PPT
+
+🧠 Viva notes
+
+Just tell me 👍
+
+
+
+# sqlboltexercise
+---> Exercise 1:SELECT queries 101
+
+**To retrieve data from a SQL database, we need to write SELECT statements**, which are often colloquially referred to as queries. A query in itself is just a statement which declares what data we are looking for, where to find it in the database, and optionally, how to transform it before it is returned. It has a specific syntax though, which is what we are going to learn in the following exercises.
+
+As we mentioned in the introduction, **you can think of a table in SQL as a type of an entity** (ie. Dogs), and each row in that table as a specific instance of that type (ie. A pug, a beagle, a different colored pug, etc). This means that the columns would then represent the common properties shared by all instances of that entity (ie. Color of fur, length of tail, etc).
+
+
+
+**Find the title of each film.**
+
+sql
+SELECT title from movies;
+
+   
+  - Monsters, Inc.
+- Finding Nemo
+- The Incredibles
+- Cars
+- Ratatouille
+- WALL-E
+- Up
+- Toy Story 3
+- Cars 2
+- Brave
+- Monsters University
+
+
+Question:2 Find the director of each film
+
+sql
+SELECT director from movies;
+
+   
+- Pete Docter
+- Andrew Stanton
+- Brad Bird
+- John Lasseter
+- Brad Bird
+- Andrew Stanton
+- Pete Docter
+- Lee Unkrich
+- John Lasseter
+- Brenda Chapman
+- Dan Scanlon
+
+Question:3 Find the title and director of each film
+
+sql
+SELECT title , director from movies;
+
+   
+| Title | Director |
+|------|----------|
+| Monsters, Inc. | Pete Docter |
+| Finding Nemo | Andrew Stanton |
+| The Incredibles | Brad Bird |
+| Cars | John Lasseter |
+| Ratatouille | Brad Bird |
+| WALL-E | Andrew Stanton |
+| Up | Pete Docter |
+| Toy Story 3 | Lee Unkrich |
+| Cars 2 | John Lasseter |
+| Brave | Brenda Chapman |
+| Monsters University | Dan Scanlon |
+
+
+Question:4 Find the title and year of each film
+
+sql
+SELECT title , year from movies;
+
+   
+| Title | Year |
+|------|------|
+| Monsters, Inc. | 2001 |
+| Finding Nemo | 2003 |
+| The Incredibles | 2004 |
+| Cars | 2006 |
+| Ratatouille | 2007 |
+| WALL-E | 2008 |
+| Up | 2009 |
+| Toy Story 3 | 2010 |
+| Cars 2 | 2011 |
+| Brave | 2012 |
+| Monsters University | 2013 |
+
+Question:5 Find all the information about each film
+
+sql
+SELECT * from movies;
+
+   
+| ID | Title | Director | Year | Length (Minutes) |
+|----|------|----------|------|------------------|
+| 1 | Toy Story | John Lasseter | 1995 | 81 |
+| 2 | A Bug's Life | John Lasseter | 1998 | 95 |
+| 3 | Toy Story 2 | John Lasseter | 1999 | 93 |
+| 4 | Monsters, Inc. | Pete Docter | 2001 | 92 |
+| 5 | Finding Nemo | Andrew Stanton | 2003 | 107 |
+| 6 | The Incredibles | Brad Bird | 2004 | 116 |
+| 7 | Cars | John Lasseter | 2006 | 117 |
+| 8 | Ratatouille | Brad Bird | 2007 | 115 |
+| 9 | WALL-E | Andrew Stanton | 2008 | 104 |
+| 10 | Up | Pete Docter | 2009 | 101 |
+| 11 | Toy Story 3 | Lee Unkrich | 2010 | 103 |
+| 12 | Cars 2 | John Lasseter | 2011 | 120 |
+| 13 | Brave | Brenda Chapman | 2012 | 102 |
+| 14 | Monsters University | Dan Scanlon | 2013 | 110 |
+make it git hub pastable code
+
+Here is your clean GitHub-ready Markdown code (properly formatted & corrected) 👇
+
 # SQLBolt Exercise 1: SELECT Queries 101
 
 ## Introduction
 To retrieve data from a SQL database, we use **SELECT statements** (queries).  
 A query specifies:
 - What data to retrieve  
-- From which table 
+- From which table  
 - How to display it  
 
 A table represents an **entity**, rows are **instances**, and columns are **attributes**.
@@ -132,3 +758,7 @@ SELECT * FROM movies;
 | 12 | Cars 2 | John Lasseter | 2011 | 120 |
 | 13 | Brave | Brenda Chapman | 2012 | 102 |
 | 14 | Monsters University | Dan Scanlon | 2013 | 110 |
+
+
+
+
