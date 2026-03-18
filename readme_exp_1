@@ -4,7 +4,7 @@
 To retrieve data from a SQL database, we use **SELECT statements** (queries).  
 A query specifies:
 - What data to retrieve  
-- From which table  
+- From which table 
 - How to display it  
 
 A table represents an **entity**, rows are **instances**, and columns are **attributes**.
