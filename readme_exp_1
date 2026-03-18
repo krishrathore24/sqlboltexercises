@@ -1,16 +1,22 @@
 # sqlboltexercise
 ---> Exercise 1:SELECT queries 101
 
-**To retrieve data from a SQL database, we need to write SELECT statements**, which are often colloquially referred to as queries. A query in itself is just a statement which declares what data we are looking for, where to find it in the database, and optionally, how to transform it before it is returned. It has a specific syntax though, which is what we are going to learn in the following exercises.
-As we mentioned in the introduction, **you can think of a table in SQL as a type of an entity** (ie. Dogs), and each row in that table as a specific instance of that type (ie. A pug, a beagle, a different colored pug, etc). This means that the columns would then represent the common properties shared by all instances of that entity (ie. Color of fur, length of tail, etc).
+*To retrieve data from a SQL database, we need to write SELECT statements*,
+which are often colloquially referred to as queries.
+A query in itself is just a statement which declares what data we are looking for, where to find it in the database, and optionally, 
+how to transform it before it is returned. It has a specific syntax though,
+which is what we are going to learn in the following exercises.
+
+As we mentioned in the introduction, *you can think of a table in SQL as a type of an entity* (ie. Dogs), and each row in that table as a specific instance of that type (ie. A pug, a beagle, a different colored pug, etc). This means that the columns would then represent the common properties shared by all instances of that entity (ie. Color of fur, length of tail, etc).
 
 
 
 Question:1 Find the title of each film 
 
 ```sql
-SELECT director FROM movies;
+SELECT title from movies;
 ```
+
    
   - Monsters, Inc.
 - Finding Nemo
@@ -27,9 +33,9 @@ SELECT director FROM movies;
 
 Question:2 Find the director of each film
 
-```sql
+sql
 SELECT director from movies;
-```
+
    
 - Pete Docter
 - Andrew Stanton
@@ -45,9 +51,9 @@ SELECT director from movies;
 
 Question:3 Find the title and director of each film 
 
-```sql 
+sql 
 SELECT title , director from movies;
-```
+
    
 | Title | Director |
 |------|----------|
@@ -66,9 +72,9 @@ SELECT title , director from movies;
 
 Question:4 Find the title and year of each film
 
-```sql 
+sql 
 SELECT title , year from movies;
-```
+
    
 | Title | Year |
 |------|------|
@@ -86,9 +92,9 @@ SELECT title , year from movies;
 
 Question:5 Find all the information about each film
 
-```sql
+sql
 SELECT * from movies;
-```
+
    
 | ID | Title | Director | Year | Length (Minutes) |
 |----|------|----------|------|------------------|
