@@ -1,57 +1,74 @@
-# sqlboltexercise
----> Exercise 1:SELECT queries 101
+# SQLBolt Exercise 1: SELECT Queries 101
 
-**To retrieve data from a SQL database, we need to write SELECT statements**, which are often colloquially referred to as queries. A query in itself is just a statement which declares what data we are looking for, where to find it in the database, and optionally, how to transform it before it is returned. It has a specific syntax though, which is what we are going to learn in the following exercises.
+## Introduction
+To retrieve data from a SQL database, we use **SELECT statements** (queries).  
+A query specifies:
+- What data to retrieve  
+- From which table  
+- How to display it  
 
-As we mentioned in the introduction, **you can think of a table in SQL as a type of an entity** (ie. Dogs), and each row in that table as a specific instance of that type (ie. A pug, a beagle, a different colored pug, etc). This means that the columns would then represent the common properties shared by all instances of that entity (ie. Color of fur, length of tail, etc).
+A table represents an **entity**, rows are **instances**, and columns are **attributes**.
 
+---
 
-
-**Find the title of each film.**
-
+## Question 1: Find the title of each film
 ```sql
-SELECT title from movies;
+SELECT title FROM movies;
 ```
-   
-  - Monsters, Inc.
-- Finding Nemo
-- The Incredibles
-- Cars
-- Ratatouille
-- WALL-E
-- Up
-- Toy Story 3
-- Cars 2
-- Brave
-- Monsters University
 
+**Output:**
+- Toy Story  
+- A Bug's Life  
+- Toy Story 2  
+- Monsters, Inc.  
+- Finding Nemo  
+- The Incredibles  
+- Cars  
+- Ratatouille  
+- WALL-E  
+- Up  
+- Toy Story 3  
+- Cars 2  
+- Brave  
+- Monsters University  
 
-Question:2 Find the director of each film
+---
 
+## Question 2: Find the director of each film
 ```sql
-SELECT director from movies;
+SELECT director FROM movies;
 ```
-   
-- Pete Docter
-- Andrew Stanton
-- Brad Bird
-- John Lasseter
-- Brad Bird
-- Andrew Stanton
-- Pete Docter
-- Lee Unkrich
-- John Lasseter
-- Brenda Chapman
-- Dan Scanlon
 
-Question:3 Find the title and director of each film
+**Output:**
+- John Lasseter  
+- John Lasseter  
+- John Lasseter  
+- Pete Docter  
+- Andrew Stanton  
+- Brad Bird  
+- John Lasseter  
+- Brad Bird  
+- Andrew Stanton  
+- Pete Docter  
+- Lee Unkrich  
+- John Lasseter  
+- Brenda Chapman  
+- Dan Scanlon  
 
+---
+
+## Question 3: Find the title and director of each film
 ```sql
-SELECT title , director from movies;
+SELECT title, director FROM movies;
 ```
-   
+
+**Output:**
+
 | Title | Director |
 |------|----------|
+| Toy Story | John Lasseter |
+| A Bug's Life | John Lasseter |
+| Toy Story 2 | John Lasseter |
 | Monsters, Inc. | Pete Docter |
 | Finding Nemo | Andrew Stanton |
 | The Incredibles | Brad Bird |
@@ -64,15 +81,20 @@ SELECT title , director from movies;
 | Brave | Brenda Chapman |
 | Monsters University | Dan Scanlon |
 
+---
 
-Question:4 Find the title and year of each film
-
+## Question 4: Find the title and year of each film
 ```sql
-SELECT title , year from movies;
+SELECT title, year FROM movies;
 ```
-   
+
+**Output:**
+
 | Title | Year |
 |------|------|
+| Toy Story | 1995 |
+| A Bug's Life | 1998 |
+| Toy Story 2 | 1999 |
 | Monsters, Inc. | 2001 |
 | Finding Nemo | 2003 |
 | The Incredibles | 2004 |
@@ -85,12 +107,15 @@ SELECT title , year from movies;
 | Brave | 2012 |
 | Monsters University | 2013 |
 
-Question:5 Find all the information about each film
+---
 
+## Question 5: Find all the information about each film
 ```sql
-SELECT * from movies;
+SELECT * FROM movies;
 ```
-   
+
+**Output:**
+
 | ID | Title | Director | Year | Length (Minutes) |
 |----|------|----------|------|------------------|
 | 1 | Toy Story | John Lasseter | 1995 | 81 |
